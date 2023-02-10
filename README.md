@@ -5,7 +5,7 @@ Programa basado en listar,crear,actualizar y borrar enfocado a candidatos de una
 
 ## Screenshots
 
-![Employee data](/Screenshot/Captura.PNG?raw=true "Employee Data title")
+![App Screenshot](/Screenshot/Captura.PNG?raw=true "Screenshot")
 
 
 ## Creadores
