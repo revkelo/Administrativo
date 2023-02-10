@@ -2,6 +2,12 @@
 
 Programa basado en listar,crear,actualizar y borrar enfocado a candidatos de una empresa por su cargo.
 
+
+## Screenshots
+
+![App Screenshot](/Screenshot/Captura.png?raw=true "Programa")
+
+
 ## Creadores
 
 Estudiantes de La Universidad El Bosque:
