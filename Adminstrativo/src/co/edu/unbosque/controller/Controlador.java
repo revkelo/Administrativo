@@ -132,9 +132,18 @@ public class Controlador implements ActionListener {
 				String apellido = vp.getJpane().mostrarDialogo("Digite su apellido");
 				String cargo = vp.getJpane().mostrarDialogo("Digite su cargo");
 				int edad = Integer.parseInt(vp.getJpane().mostrarDialogo("Digite su edad"));
-				long cedula =  Long.parseLong(vp.getJpane().mostrarDialogo("Digite su cedula sin puntos"));
-				model.getCandao().guardar(nombre, apellido, cargo, edad, cedula);
-				vp.getJpane().mostrarInformacion("Se agrega correctamente");
+				long cedula = Long.parseLong(vp.getJpane().mostrarDialogo("Digite su cedula sin puntos"));
+				for (int i = 0; i < model.getCandao().getLista().size(); i++) {
+					if (model.getCandao().getLista().get(i).getCedula() == cedula) {
+						vp.getJpane().mostrarError("Esta cedula ya esta en la base de datos");
+						break;
+					} else {
+						model.getCandao().guardar(nombre, apellido, cargo, edad, cedula);
+						vp.getJpane().mostrarInformacion("Se agrega correctamente");
+						break;
+					}
+				}
+
 			} catch (Exception e2) {
 				vp.getJpane().mostrarError("Digitaste algo mal");
 			}
