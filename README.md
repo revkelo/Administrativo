@@ -1,6 +1,6 @@
 # Administrativo
 
-Programa basado en listar,crear,actualizar y borrar enfocado a candidatos de una empresa por su cargo.
+Programa basado en listar, crear, actualizar y borrar enfocado a candidatos de una empresa por su cargo.
 
 
 ## Screenshots
