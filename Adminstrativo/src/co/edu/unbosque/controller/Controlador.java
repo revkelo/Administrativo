@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package co.edu.unbosque.controller;
 
 import java.awt.event.ActionEvent;
@@ -9,19 +12,38 @@ import javax.swing.JOptionPane;
 
 import co.edu.unbosque.model.FachadaModelo;
 import co.edu.unbosque.view.FachadaVista;
+/**
+ * 
+ * @author Kevin Gonzalez
+ * @author Jose Carreño
+ */
 
 public class Controlador implements ActionListener {
-
+	/**
+	 * Atributo con fachadamodelo de candidatos
+	 */
 	private FachadaModelo model;
+	/**
+	 * Atributo con fachadavista de candidatos
+	 */
 	private FachadaVista vp;
 
+	/**
+	 * Metodo constructor <b> pre </b> Implementar las funcionalidaades del programa
+	 * <br>
+	 * <b> post </b> El programa funciona <br>
+	 */
+	
 	public Controlador() {
 		model = new FachadaModelo();
 		vp = new FachadaVista();
 		asignarOyentes();
 		agregarTabla();
 	}
-
+	
+	/**
+	 * Borra todos los datos en el jtable
+	 */
 	private void borrarTabla() {
 		if (vp.getVprin().getPb().getT_lista().getRowCount() > 0) {
 			for (int i = vp.getVprin().getPb().getT_lista().getRowCount() - 1; i > -1; i--) {
@@ -29,7 +51,9 @@ public class Controlador implements ActionListener {
 			}
 		}
 	}
-
+	/**
+	 * Sincroniza todo los datos de la lista al jtable 
+	 */
 	public void agregarTabla() {
 
 		for (int i = 0; i < model.getCandao().getLista().size(); i++) {
@@ -50,7 +74,12 @@ public class Controlador implements ActionListener {
 		}
 	}
 
-
+	/**
+	 * Asigna los oyentes a los botones <b> pre </b> La existencia de los botones
+	 * <br>
+	 * <b> post </b> Los botones tienen acciones <br>
+	 */
+	
 	private void asignarOyentes() {
 		vp.getVprin().getB_salir().addActionListener(this);
 		vp.getVprin().getB_crud().addActionListener(this);
@@ -62,6 +91,10 @@ public class Controlador implements ActionListener {
 		vp.getVprin().getB_atras2().addActionListener(this);
 		vp.getVprin().getB_ordenar().addActionListener(this);
 	}
+	
+	/**
+	 * Ejecuta el programa
+	 */
 
 	public void ejecutar() {
 		vp.getVprin().setVisible(true);
@@ -69,6 +102,11 @@ public class Controlador implements ActionListener {
 
 	}
 
+	/**
+	 * Define las acciones de los botones <b> pre </b> Los botones deben tener
+	 * acciones detectadas <br>
+	 * <b> post </b> Los botones tienen sus acciones especificadas <br>
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String comando = e.getActionCommand();
@@ -203,5 +241,34 @@ public class Controlador implements ActionListener {
 			}
 		}
 	}
+
+	/**
+	 * @return the model
+	 */
+	public FachadaModelo getModel() {
+		return model;
+	}
+
+	/**
+	 * @param model the model to set
+	 */
+	public void setModel(FachadaModelo model) {
+		this.model = model;
+	}
+
+	/**
+	 * @return the vp
+	 */
+	public FachadaVista getVp() {
+		return vp;
+	}
+
+	/**
+	 * @param vp the vp to set
+	 */
+	public void setVp(FachadaVista vp) {
+		this.vp = vp;
+	}
+	
 
 }
