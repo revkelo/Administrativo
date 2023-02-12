@@ -4,16 +4,28 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import co.edu.unbosque.model.persistance.FileHandler;
-
+/*
+* 
+* Clase candidatosDAO
+*/
 public class CandidatosDAO {
 
+	/**
+	 * Lista basada en el dto
+	 */
 	private ArrayList<CandidatosDTO> lista;
 
+	/**
+	 * Constructor
+	 */
 	public CandidatosDAO() {
 		lista = new ArrayList<CandidatosDTO>();
 		loadFile();
 	}
 
+	/**
+	 * Metodo encargado de ver el contenido de la base de datos
+	 */
 	public String contentBase() {
 		String res = "";
 		for (CandidatosDTO s : lista) {
@@ -46,6 +58,9 @@ public class CandidatosDAO {
 
 	}
 
+	/**
+	 * Metodo encargado de guardar en la lista y en el archivo cvs
+	 */
 	public void guardar(String nombre, String apellido, String cargo, int edad, long cedula) {
 
 		CandidatosDTO a = new CandidatosDTO(nombre, apellido, cargo, edad, cedula);
@@ -53,6 +68,10 @@ public class CandidatosDAO {
 		writeFile();
 
 	}
+	
+	/**
+	 * Metodo encargado de eliminar
+	 */
 
 	public boolean eliminar(long cedula) {
 
@@ -72,6 +91,9 @@ public class CandidatosDAO {
 
 
 	}
+	/**
+	 * Metodo encargado de actualizar el cargo
+	 */
 
 	public boolean actualizarNombre(long cedula, String cargo) {
 		for (int i = 0; i < lista.size(); i++) {
@@ -95,6 +117,9 @@ public class CandidatosDAO {
 		return false;
 	}
 
+	/**
+	 * Metodo encargado de mostrar en consola
+	 */
 	public void mostrar() {
 
 		for (int i = 0; i < lista.size(); i++) {
