@@ -1,9 +1,19 @@
 package co.edu.unbosque.model;
-
+/*
+* 
+* Clase que conecta las clases en modelo que hace que no se llene mucho el controller
+*/
 public class FachadaModelo {
-
+	/*
+	* 
+	* Atributos basados en la clases que estan en la vista
+	*/
 	private CandidatosDAO candao;
 	private Ordenamiento orde;
+	/*
+	* 
+	* Constructor
+	*/
 
 	public FachadaModelo() {
 		setOrde(new Ordenamiento());

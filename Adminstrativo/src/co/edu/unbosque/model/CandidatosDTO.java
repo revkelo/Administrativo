@@ -1,18 +1,33 @@
 package co.edu.unbosque.model;
-
+/*
+* 
+* Clase candidatosDTO
+*/
 public class CandidatosDTO {
 
+	/*
+	* 
+	* Datos nombre, apellido , cargo , edad , cedula
+	*/
+	
 	private String nombre;
 	private String apellido;
 	private String cargo;
 	private int edad;
 	private long cedula;
 
+	/*
+	* 
+	* Constructor
+	*/
 	public CandidatosDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-
+	/*
+	* 
+	* Constructor avanzado con los parametros de los atributos
+	*/
 	public CandidatosDTO(String nombre, String apellido, String cargo, int edad, long cedula) {
 		super();
 		this.nombre = nombre;
@@ -21,6 +36,10 @@ public class CandidatosDTO {
 		this.edad = edad;
 		this.cedula = cedula;
 	}
+	/*
+	* 
+	* toString que tiene la forma de guardar en filehandler
+	*/
 
 	@Override
 	public String toString() {
@@ -30,7 +49,7 @@ public class CandidatosDTO {
 		return res;
 	}
 	/**
-	 * @return the nombre
+	
 	 */
 	public String getNombre() {
 		return nombre;
