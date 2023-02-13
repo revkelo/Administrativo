@@ -2,6 +2,7 @@
 
 Programa basado en listar, crear, actualizar y borrar enfocado a candidatos de una empresa por su cargo.
 
+Program based on listing, creating, updating and deleting focused on candidates of a company for their position.
 
 ## Screenshots
 
