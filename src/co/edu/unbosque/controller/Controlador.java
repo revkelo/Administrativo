@@ -115,7 +115,7 @@ public class Controlador implements ActionListener {
 		}
 		if (comando.equals("listar")) {
 
-			borrarTabla();
+		borrarTabla();
 			agregarTabla();
 			vp.getVprin().getPb().setVisible(true);
 			vp.getVprin().getMenu().setVisible(false);

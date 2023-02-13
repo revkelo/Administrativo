@@ -79,6 +79,7 @@ public class CandidatosDAO {
 			if (lista.get(i).getCedula()==cedula) {
 				try {
 					lista.remove(i);
+					writeFile();
 					return true;
 
 				} catch (Exception e) {
@@ -87,6 +88,7 @@ public class CandidatosDAO {
 
 			}
 		}
+	
 		return false;
 
 
