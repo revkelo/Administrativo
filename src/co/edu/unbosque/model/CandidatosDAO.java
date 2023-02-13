@@ -105,7 +105,7 @@ public class CandidatosDAO {
 				try {
 
 					lista.get(i).setCargo(cargo);
-
+writeFile();
 					return true;
 
 				} catch (Exception e) {
