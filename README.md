@@ -1,6 +1,7 @@
 # Administrativo
 
-Programa basado en listar, crear, actualizar y borrar enfocado a candidatos de una empresa por su cargo.
+Programa basado en listar, crear, actualizar y borrar enfocado a candidatos de una empresa por su cargo y conectado por servidor que el cliente lo puede manejar con.
+https://github.com/YAMlNORYUU/Cliente
 
 Program based on listing, creating, updating and deleting focused on candidates of a company for their position.
 
