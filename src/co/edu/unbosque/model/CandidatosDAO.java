@@ -57,6 +57,29 @@ public class CandidatosDAO {
 		}
 
 	}
+	public int buscadorCedu(long cedula) {
+		int aux = -1;
+		for (int i = 0; i < lista.size(); i++) {
+
+			if (lista.get(i).getCedula()==cedula) {
+
+				try {
+					System.out.println(""+i);
+aux = i;
+				
+
+					return aux;
+
+				} catch (Exception e) {
+
+					return aux;
+
+				}
+
+			}
+		}
+		return aux;
+	}
 
 	/**
 	 * Metodo encargado de guardar en la lista y en el archivo cvs
@@ -122,17 +145,22 @@ writeFile();
 	/**
 	 * Metodo encargado de mostrar en consola
 	 */
-	public void mostrar() {
+	public String mostrar(int i) {
+		String res = "" ;
 
-		for (int i = 0; i < lista.size(); i++) {
 
-			//			miconsola.imprimirString("Nombre " + lista.get(i).getNombre());
-			//			miconsola.imprimirString("Apell " + lista.get(i).getNota_materia1());
-			//			miconsola.imprimirString("Nota materia 2 " + lista.get(i).getNota_materia2());
-			//			miconsola.imprimirString("Nota materia 3 " + lista.get(i).getNota_materia3());
-			//			miconsola.imprimirString("Promedio " + lista.get(i).getPromedio());
+	
 
-		}
+
+			res +="Nombre " + lista.get(i).getNombre()+ "\n";
+			res +="Apellido " + lista.get(i).getApellido()+ "\n";
+			res +="Cargo " + lista.get(i).getCargo()+ "\n";
+			res +="Edad " + lista.get(i).getEdad()+ "\n";
+			res +="Cedula " + lista.get(i).getCedula()+ "\n";
+
+
+		
+		return res;
 	}
 
 	/**

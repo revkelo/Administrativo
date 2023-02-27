@@ -11,6 +11,7 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 
 import co.edu.unbosque.model.FachadaModelo;
+import co.edu.unbosque.model.Servidor;
 import co.edu.unbosque.view.FachadaVista;
 /**
  * 
@@ -98,6 +99,9 @@ public class Controlador implements ActionListener {
 
 	public void ejecutar() {
 		vp.getVprin().setVisible(true);
+		vp.getJpane().mostrarOk("Servidor abierto puerto 5000");
+		Servidor server = new Servidor();
+    	server.stat();
 
 
 	}
